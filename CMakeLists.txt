@@ -4,6 +4,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(lib/vmath)
+add_subdirectory(lib/vtl)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -16,5 +17,5 @@ enable_testing()
 
 
 add_executable(vtest test/test.cpp )
-target_link_libraries(vtest gtest_main vmath)
+target_link_libraries(vtest gtest_main vmath vtl)
 

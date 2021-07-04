@@ -1,4 +1,5 @@
 #include "vmath/complex.h"
+#include "vtl/vector.h"
 #include <gtest/gtest.h> 
 
 TEST(Complex , DefaultConstrctor){
@@ -34,3 +35,41 @@ TEST(Complex , SubtractionAssignment){
   EXPECT_EQ(5, c.real());
   EXPECT_EQ(10, c.imag());
 };
+
+TEST(Vector, DefaultConstructor){
+  Vector v;
+  EXPECT_EQ(0, v.size());
+}
+
+
+
+TEST(Vector, Constructor){
+  Vector v(5);
+  EXPECT_EQ(5, v.size());
+
+}
+
+TEST(Vector, SubscriptOperator){
+  Vector v(5);
+  v[0] = 0;
+  v[1] = 1;
+  EXPECT_EQ(1, v[1]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
